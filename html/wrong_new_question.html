@@ -1,0 +1,137 @@
+
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+  <meta charset="utf-8">
+  <title>New Question page</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../css/new_quetion.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">AskPupkin</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">log in</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">register</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <H1 class="new_question">New Question</H1>
+        <p><font color="red">Sorry, invalid question form!</font></p>
+        <div class="row title">
+          <div class="col-2">
+            Title
+          </div>
+          <div class="col-10">
+            <input type="text" size="40" maxlength="50" placeholder="Enter the title here">
+          </div>
+        </div>
+
+        <div class="row text">
+          <div class="col-2">
+            Text
+          </div>
+          <div class="col-10">
+            <textarea name="comment" cols="44" rows="15" maxlength="700" placeholder="Enter the text here"></textarea>
+          </div>
+        </div>
+
+        <div class="row tags">
+          <div class="col-2">
+            Tags
+          </div>
+          <div class="col-10">
+            <input type="text" size="40" maxlength="50" placeholder="Enter the tags here">
+          </div>
+        </div>
+
+        <button class="ask">ASK!</button>
+
+      </div>
+
+
+
+      <!-- Right part -->
+      <div class="col-4 right_part">
+        <H2 class="tags">Popular tags</H2>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <a href="#" style="color: red">perl</a>
+            </div>
+            <div class="col">
+              <a href="#">python</a>
+            </div>
+            <div class="col">
+              <a href="#" style="color: green">TechnoPark</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="#">MySQL</a>
+            </div>
+            <div class="col">
+              <a href="#">django</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <a href="#" style="color: yellow">Mail.ru</a>
+            </div>
+            <div class="col">
+              <a href="#">Voloshin</a>
+            </div>
+            <div class="col">
+              <a href="#">Firefox</a>
+            </div>
+          </div>
+
+        </div>
+        <H2 class="tag">Best Members</H2>
+        <div class="best_memb">
+          <a href="#" style="color: black">Mr. Freeman</a> <br>
+          <a href="#" style="color: black">Mr. Hisenberg</a> <br>
+          <a href="#" style="color: black">Bender</a> <br>
+          <a href="#" style="color: black">V. Pupkin</a> <br>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; Частиков Александр
+  </footer>
+</main>
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

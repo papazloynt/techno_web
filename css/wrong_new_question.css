@@ -1,0 +1,47 @@
+main > .container {
+    padding: 60px 15px 0;
+}
+
+.header{
+    margin: 24px 0 0 0 ;
+}
+
+.title {
+    margin: 48px 51px 30px 0;
+}
+
+.text {
+    margin: 39px 58px 33px 0;
+}
+
+.tags {
+    margin: 0 44px 0 0;
+}
+
+.ask {
+    margin: 25px 0 0 343px;
+}
+
+
+.right_part{
+    margin: 80px 0px 0px 0px;
+}
+
+
+.tag{
+    margin: 20px;
+}
+
+.best_memb {
+    margin: 0 0 0 25px;
+}
+
+footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}
+

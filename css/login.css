@@ -1,0 +1,37 @@
+main > .container {
+  padding: 60px 15px 0;
+}
+
+
+.header{
+  margin: 24px 0 0 10px ;
+}
+
+.login{
+  margin: 27px 0;
+}
+
+.button{
+    margin: 10px 0;
+}
+
+ .right_part{
+    margin: 80px 0px 0px 0px;
+ }
+
+ .tags{
+    margin: 20px;
+ }
+
+ .best_memb {
+     margin: 0 0 0 25px;
+  }
+
+footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    padding: 10px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+}
