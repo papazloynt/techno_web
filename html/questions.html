@@ -1,4 +1,3 @@
-{% load static %}
 <!doctype html>
 <html lang="en" class="h-100">
   <head>
@@ -6,10 +5,10 @@
     <title>First page</title>
 
     <!-- Bootstrap core CSS -->
-<link href="{%  static "css/bootstrap.min.css" %}" rel="stylesheet">
+<link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static "css/questions.css" %}" rel="stylesheet">
+    <link href="../css/questions.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
     
@@ -24,7 +23,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <img src="{% static "img/200.jpg" %}" width="50" height="50">
+            <img src="../img/200.jpg" width="50" height="50">
           </li>
           <li class="nav-item">
             <p class="nav-link active" aria-current="page">Dr. Paper</p>
@@ -63,14 +62,14 @@
           <div class="row question">
             <div class="col-3 text_img">
               <figure class="sign">
-                <p><img src="{% static "img/200.jpg" %}" width="130" height="130"></p>
+                <p><img src="../img/200.jpg" width="130" height="130"></p>
                 <figcaption> 
                   <p class="number">3</p> 
                    <button>
-                    <img class="appraisal" src="{% static "img/like.png" %}">
+                    <img class="appraisal" src="../img/like.png" >
                   </button>
                   <button>
-                  <img class="appraisal" src="{% static "img/dislike.png" %}">
+                  <img class="appraisal" src="../img/dislike.png" >
                   </button>
                 </figcaption>
               </figure>
@@ -99,14 +98,14 @@
           <div class="row question">
             <div class="col-3 text_img">
               <figure class="sign">
-                <p><img src="{% static "img/200.jpg" %}" width="130" height="130" alt="Скульптура"></p>
+                <p><img src="../img/200.jpg" width="130" height="130" alt="Скульптура"></p>
                 <figcaption> 
                   <p class="number">3</p> 
                    <button>
-                    <img class="appraisal" src="{% static "img/like.png" %}">
+                    <img class="appraisal" src="../img/like.png" >
                   </button>
                   <button>
-                  <img class="appraisal" src="{% static "img/dislike.png" %}">
+                  <img class="appraisal" src="../img/dislike.png" >
                   </button>
                 </figcaption>
               </figure>
@@ -135,14 +134,14 @@
           <div class="row question">
             <div class="col-3 text_img">
               <figure class="sign">
-                <p><img src="{% static "img/200.jpg" %}" width="130" height="130" alt="Скульптура"></p>
+                <p><img src="../img/200.jpg" width="130" height="130" alt="Скульптура"></p>
                 <figcaption> 
                   <p class="number">3</p> 
                    <button>
-                    <img class="appraisal" src="{% static "img/like.png" %}">
+                    <img class="appraisal" src="../img/like.png" >
                   </button>
                   <button>
-                  <img class="appraisal" src="{% static "img/dislike.png" %}">
+                  <img class="appraisal" src="../img/dislike.png" >
                   </button>
                 </figcaption>
               </figure>
@@ -233,7 +232,7 @@
   </footer>
 </main>
 
-  <script src="{% static "js/bootstrap.bundle.min.js"%}"></script>
+  <script src="../js/bootstrap.bundle.min.js"></script>
       
 </body>
 </html>
