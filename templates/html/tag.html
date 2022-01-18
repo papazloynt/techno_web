@@ -1,0 +1,33 @@
+{% extends "include/login_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/tag.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+          <div class="header">
+            <h2>Tag : bender</h2>
+          </div>
+
+          <!-- Questions -->
+          {% for question in questions %}
+            {% include "include/single_question.html" %}
+          {% endfor %}
+
+            <!-- Pages -->
+            <div class="pagination">
+                {% if questions.has_previous %}
+                    <a href="?page=1"><<</a>
+                    <a href="?page={{ questions.previous_page_number }}">{{ questions.previous_page_number }}</a>
+                {% endif %}
+
+                <a>{{ questions.number}}</a>
+
+                {% if questions.has_next %}
+                    <a href="?page={{questions.next_page_number}}">{{ questions.next_page_number }}</a>
+                    <a href="?page={{questions.end_index}}">>></a>
+                {% endif %}
+            </div>
+{% endblock content %}

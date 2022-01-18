@@ -1,0 +1,54 @@
+{% extends "include/login_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/settings.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+          <div class="header">
+            <h2>Settings: Dr. Pepper</h2>
+          </div>
+
+          <div class="row settings">
+            <div class="col-3">
+              Login
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" value="Det007" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row settings">
+            <div class="col-3">
+              Email
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" value="123@mail.ru" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row settings">
+            <div class="col-3">
+              NickName
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" value="Detanator007" maxlength="50">
+            </div>
+          </div>
+
+           <div class="row settings">
+            <div class="col-3">
+              Upload avatar
+            </div>
+            <div class="col-9">
+              <img src="../../static/img/200.jpg" width="70" height="70">
+              <br>
+              <input class="img" type="file" name="photo" multiple accept="image/*,image/jpg">
+             <input type="submit" value="Отправить">
+             <br>
+             <button class="btn btn-outline-success" type="submit">Save</button>
+            </div>
+          </div>
+{% endblock content %}

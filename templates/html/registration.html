@@ -1,0 +1,70 @@
+{% extends "include/unlogin_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/registration.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+          <div class="header">
+            <h2>Registration</h2>
+            <p><font color="red">Sorry, this email address already registered!</font></p>
+          </div>
+
+          <div class="row reg">
+            <div class="col-3">
+              Login
+            </div>
+            <div class="col-9" >
+              <input type="text" size="20" placeholder="Enter your login here" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row reg">
+            <div class="col-3">
+              Email
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" placeholder="Enter your email here" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row reg">
+            <div class="col-3">
+              NickName
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" placeholder="Enter your nickname here" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row reg">
+            <div class="col-3">
+              Password
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" placeholder="Enter your password here" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row reg">
+            <div class="col-3">
+              Repeat password
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" placeholder="Enter your password again here" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row reg">
+            <div class="col-3">
+              Upload avatar
+            </div>
+            <div class="col-9">
+              <input class="img" type="file" name="photo" multiple accept="image/*,image/jpg">
+             <br>
+             <button class="btn btn-outline-success button" type="submit">Register!</button>
+            </div>
+          </div>
+{% endblock content %}

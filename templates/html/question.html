@@ -1,0 +1,30 @@
+{% extends "include/unlogin_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/question.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+          <!-- Question -->
+          {% include "include/single_header_question.html" %}
+
+          <!-- Answers -->
+          {% for answer in objects %}
+            {% include "include/single_answer.html" %}
+          {% endfor %}
+
+          <!-- Pages -->
+          {% include "include/paginates.html" %}
+
+          <div class="line"></div>
+
+          <div class="inut_answer">
+            <textarea name="comment" cols="80" rows="5" placeholder="Enter your answer here..." maxlength="1000"></textarea>
+          </div>
+
+          <div class="button">
+            <button>Answer</button>
+          </div>
+{% endblock content %}

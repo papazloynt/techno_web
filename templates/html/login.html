@@ -1,0 +1,36 @@
+{% extends "include/unlogin_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/login.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+          <div class="header">
+            <h2>Log In</h2>
+            <p><font color="red">Sorry, wrong password!</font></p>
+          </div>
+
+          <div class="row login">
+            <div class="col-3">
+              Login
+            </div>
+            <div class="col-9" >
+              <input type="text" size="20" placeholder="Enter your login here" maxlength="50">
+            </div>
+          </div>
+
+          <div class="row login">
+            <div class="col-3">
+              Password
+            </div>
+            <div class="col-9">
+              <input type="text" size="20" placeholder="Enter your password here" maxlength="50">
+              <br>
+              <button class="btn btn-outline-success button" type="submit">Save</button>
+              <br>
+              <a href="{% url "reg" %}">create new account</a>
+            </div>
+          </div>
+{% endblock content %}

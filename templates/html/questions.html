@@ -1,0 +1,28 @@
+{% extends "include/login_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/questions.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+          <div class="row header">
+            <div class="col-8">
+              <H1>New Questions:</H1>
+            </div>
+            <div class="col-4 hot_question">
+              <a href="#"> Hot Questions</a>
+            </div>
+          </div>
+
+          <!-- Questions -->
+          {% for question in objects %}
+            {% include "include/single_question.html" %}
+          {% endfor %}
+
+          <!-- Pages -->
+          {% include "include/paginates.html" %}
+{% endblock content %}
+
+

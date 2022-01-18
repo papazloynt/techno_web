@@ -1,0 +1,32 @@
+{% load static %}
+    <div class="row question">
+            <div class="col-3 text_img">
+              <figure class="sign">
+                <p><img src="{% static "img/200.jpg" %}" width="130" height="130"></p>
+                <figcaption>
+                  <p class="number">3</p>
+                   <button>
+                    <img class="appraisal" src="{% static "img/like.png" %}" >
+                  </button>
+                  <button>
+                  <img class="appraisal" src="{% static "img/dislike.png" %}" >
+                  </button>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-9">
+              <a><h2>{{ question.title }}</h2></a>
+              <div>
+                {{ question.text }}
+              </div>
+
+               <div class="row indent">
+                  <div class="col-4">
+                  </div>
+                  <div class="col-8">
+                    Tags: <a href="{% url "tag" %}"> black-jack</a> <a href="{% url "tag" %}"> bender</a>
+                  </div>
+                </div>
+
+          </div>
+          </div>
