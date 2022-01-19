@@ -7,6 +7,7 @@
 {% endblock custome_style %}
 
 {% block content %}
+    <form method="post" action="{% url 'login' %}" novalidate>
           <div class="header">
             <h2>Log In</h2>
           </div>
@@ -26,11 +27,12 @@
             </div>
             <div class="col-9">
               {{ form.password }}
-              {% include "include/interrapt_input.html" %}
               <br>
               <button class="btn btn-outline-success button" type="submit">Log in</button>
               <br>
               <a href="{% url "reg" %}">create new account</a>
             </div>
+            {% include "include/interrapt_input.html" %}
           </div>
+    </form>
 {% endblock content %}
