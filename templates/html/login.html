@@ -9,15 +9,14 @@
 {% block content %}
           <div class="header">
             <h2>Log In</h2>
-            <p><font color="red">Sorry, wrong password!</font></p>
           </div>
-
+          {% csrf_token %}
           <div class="row login">
             <div class="col-3">
               Login
             </div>
             <div class="col-9" >
-              <input type="text" size="20" placeholder="Enter your login here" maxlength="50">
+              {{ form.username }}
             </div>
           </div>
 
@@ -26,9 +25,10 @@
               Password
             </div>
             <div class="col-9">
-              <input type="text" size="20" placeholder="Enter your password here" maxlength="50">
+              {{ form.password }}
+              {% include "include/interrapt_input.html" %}
               <br>
-              <button class="btn btn-outline-success button" type="submit">Save</button>
+              <button class="btn btn-outline-success button" type="submit">Log in</button>
               <br>
               <a href="{% url "reg" %}">create new account</a>
             </div>
