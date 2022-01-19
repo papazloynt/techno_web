@@ -1,0 +1,11 @@
+{% extends "include/unlogin_base.html" %}
+{% load static %}
+
+{% block custome_style %}
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/404_not_found.css" %}" rel="stylesheet">
+{% endblock custome_style %}
+
+{% block content %}
+    <h2>Страница не найдена!</h2>
+{% endblock content %}

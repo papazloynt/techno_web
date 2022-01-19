@@ -8,12 +8,13 @@
 
 {% block content %}
           <H1 class="new_question">New Question</H1>
-           <div class="row title">
+          <form action="{% url "question" id=1 %}" id="create-form" class="needs-validation" novalidate>
+          <div class="row title">
               <div class="col-2">
                 Title
               </div>
               <div class="col-10">
-                <input type="text" size="40" maxlength="50" placeholder="Enter the title here">
+                  {{ form.name }}
               </div>
             </div>
 
@@ -22,7 +23,7 @@
                 Text
               </div>
               <div class="col-10">
-                <textarea name="comment" cols="44" rows="15" maxlength="700" placeholder="Enter the text here"></textarea>
+                {{ form.text }}
               </div>
             </div>
 
@@ -31,9 +32,10 @@
                 Tags
               </div>
               <div class="col-10">
-                <input type="text" size="40" maxlength="50" placeholder="Enter the tags here">
+                {{ form.tags }}
               </div>
             </div>
 
-            <button class="ask">ASK!</button>
+            <button class="ask" type="submit">ASK!</button>
+        </form>
 {% endblock content %}

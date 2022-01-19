@@ -20,11 +20,20 @@
 
           <div class="line"></div>
 
-          <div class="inut_answer">
-            <textarea name="comment" cols="80" rows="5" placeholder="Enter your answer here..." maxlength="1000"></textarea>
-          </div>
-
-          <div class="button">
-            <button>Answer</button>
-          </div>
+          {% if user.is_authenticated %}
+            <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="input_answer">
+                {{ form.text }}
+                {% include "include/interrapt_input.html" %}
+                <div>
+                    <button class="button" type="submit">Answer</button>
+                </div>
+            </div>
+            </form>
+          {% else %}
+              <div class="input_answer">
+                <a href="{% url 'login' %}?continue={{ request.path }}" class="button">Log in to answer</a>
+              </div>
+          {% endif %}
 {% endblock content %}
