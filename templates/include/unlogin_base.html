@@ -52,37 +52,10 @@
         <div class="col-4 right_part">
         <H2 class="tags">Popular tags</H2>
         <div class="container">
-            <div class="row">
-              <div class="col">
-                <a href="#" style="color: red">perl</a>
-              </div>
-              <div class="col">
-                <a href="#">python</a>
-              </div>
-              <div class="col">
-                <a href="#" style="color: green">TechnoPark</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <a href="#">MySQL</a>
-              </div>
-              <div class="col">
-                <a href="#">django</a>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col">
-                <a href="#" style="color: yellow">Mail.ru</a>
-              </div>
-              <div class="col">
-                <a href="#">Voloshin</a>
-              </div>
-              <div class="col">
-                <a href="#">Firefox</a>
-              </div>
-            </div>
-
+            {% for tag in popular_tags %}
+                  <a href="{% url "tag" tag.id %}">{{ tag }}</a>
+                  <br>
+            {% endfor %}
         </div> 
         <H2 class="tags">Best Members</H2>
           <div class="best_memb">

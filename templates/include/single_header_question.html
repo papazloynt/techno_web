@@ -2,9 +2,9 @@
     <div class="row question">
             <div class="col-3 text_img">
               <figure class="sign">
-                <p><img src="{% static "img/200.jpg" %}" width="130" height="130"></p>
+                <p><img src="{{ question.author.image }}" width="130" height="130"></p>
                 <figcaption>
-                  <p class="number">3</p>
+                  <p class="number">{{ question.rating }}</p>
                    <button>
                     <img class="appraisal" src="{% static "img/like.png" %}" >
                   </button>
@@ -15,7 +15,7 @@
               </figure>
             </div>
             <div class="col-9">
-              <a><h2>{{ question.title }}</h2></a>
+              <a><h2>{{ question.name }}</h2></a>
               <div>
                 {{ question.text }}
               </div>
@@ -24,7 +24,10 @@
                   <div class="col-4">
                   </div>
                   <div class="col-8">
-                    Tags: <a href="{% url "tag" %}"> black-jack</a> <a href="{% url "tag" %}"> bender</a>
+                      Tags:
+                      {% for tag in question.tags.all %}
+                        <a href="{% url "tag" tag.id %}">{{ tag }}</a>
+                      {% endfor %}
                   </div>
                 </div>
 

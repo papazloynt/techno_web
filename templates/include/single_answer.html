@@ -2,9 +2,9 @@
           <div class="row answer">
             <div class="col-3 text_img">
               <figure class="sign">
-                <p><img src="{% static "img/200.jpg"%}" width="130" height="130" alt="Скульптура"></p>
+                <p><img src="{{ answer.author.image }}" width="130" height="130" alt="Скульптура"></p>
                 <figcaption>
-                  <p class="number">5</p>
+                  <p class="number">{{ answer.rating }}</p>
                    <button>
                     <img class="appraisal" src="{% static "img/like.png" %}">
                   </button>

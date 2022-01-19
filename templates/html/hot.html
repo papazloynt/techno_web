@@ -3,12 +3,17 @@
 
 {% block custome_style %}
     <!-- Custom styles for this template -->
-    <link href="{% static "css/tag.css" %}" rel="stylesheet">
+    <link href="{% static "css/questions.css" %}" rel="stylesheet">
 {% endblock custome_style %}
 
 {% block content %}
-          <div class="header">
-            <h2>Tag : {{ tag.name }}</h2>
+          <div class="row header">
+            <div class="col-8">
+              <H1>Hot Questions:</H1>
+            </div>
+            <div class="col-4 hot_question">
+              <a href="{% url "hot" %}"> Hot Questions</a>
+            </div>
           </div>
 
           <!-- Questions -->
@@ -19,3 +24,5 @@
           <!-- Pages -->
           {% include "include/paginates.html" %}
 {% endblock content %}
+
+
